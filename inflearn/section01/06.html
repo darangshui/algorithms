@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>홀수</title>
+    <script>
+      function solution(arr) {
+        // 홀수들의 합을 출력
+        // 홀수들의 최소값 출력
+
+        let answer = [];
+        let odd = [];
+        let sum = 0;
+
+        // 홀수 구하기
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] % 2 === 1) {
+            odd.push(arr[i]);
+          }
+        }
+
+        // 홀수들의 합 구하기
+        for (let i = 0; i < odd.length; i++) {
+          sum = sum + odd[i];
+        }
+        answer.push(sum);
+
+        // 최소값 구하기
+        let min = odd[0];
+        for (let i = 0; i < odd.length; i++) {
+          if (min > odd[i]) {
+            min = odd[i];
+          }
+        }
+
+        console.log("odd", odd, "sum", sum, "min", min);
+
+        return answer;
+      }
+
+      const arr = [12, 77, 38, 41, 53, 92, 85];
+      console.log(solution(arr));
+    </script>
+  </head>
+  <body></body>
+</html>
