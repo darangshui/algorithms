@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A를 #으로</title>
+    <script>
+      function solution(str) {
+        let answer = "";
+
+        for (let x of str) {
+          if (x === "A") {
+            answer = answer + "#";
+          } else {
+            answer = answer + x;
+          }
+        }
+        return answer;
+      }
+
+      const str = "BANANA";
+      console.log(solution(str));
+      // B#N#N# 으로 출력되게
+    </script>
+  </head>
+  <body>
+    <script>
+      // 내가만든코드
+      function solution(str) {
+        let answer;
+        let strArr = [];
+
+        for (let x of str) {
+          if (x === "A") {
+            strArr.push("#");
+          } else {
+            strArr.push(x);
+          }
+        }
+        answer = strArr.join("");
+
+        return answer;
+      }
+
+      // t's 1
+      function solution(s) {
+        let answer = s;
+        s = s.replace(/A/g, "#");
+        return answer;
+      }
+    </script>
+  </body>
+</html>

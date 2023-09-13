@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>대문자로 통일</title>
+    <script>
+      function solution(str) {
+        //let answer = str.toUpperCase();
+        let answer = "";
+
+        for (let x of str) {
+          if (x === x.toUpperCase()) {
+            answer += x;
+          } else {
+            answer += x.toUpperCase();
+          }
+        }
+
+        return answer;
+      }
+
+      const str = "ItisTimeToStudy";
+      console.log(solution(str));
+    </script>
+  </head>
+  <body>
+    <script></script>
+  </body>
+</html>

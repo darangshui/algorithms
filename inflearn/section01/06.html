@@ -7,6 +7,33 @@
     <title>홀수</title>
     <script>
       function solution(arr) {
+        let answer = [];
+        let sum = 0;
+        let min = Number.MAX_SAFE_INTEGER;
+
+        for (let x of arr) {
+          if (x % 2 === 1) {
+            sum += x;
+            if (min > x) {
+              min = x;
+            }
+          }
+        }
+
+        answer.push(sum);
+        answer.push(min);
+
+        return answer;
+      }
+
+      const arr = [12, 77, 38, 41, 53, 92, 85];
+      console.log(solution(arr));
+    </script>
+  </head>
+  <body>
+    <script>
+      // 내가 푼 것
+      function solution1(arr) {
         // 홀수들의 합을 출력
         // 홀수들의 최소값 출력
 
@@ -14,7 +41,7 @@
         let odd = [];
         let sum = 0;
 
-        // 홀수 구하기
+        // 홀수 구하기 - for 문
         for (let i = 0; i < arr.length; i++) {
           if (arr[i] % 2 === 1) {
             odd.push(arr[i]);
@@ -35,14 +62,8 @@
           }
         }
 
-        console.log("odd", odd, "sum", sum, "min", min);
-
         return answer;
       }
-
-      const arr = [12, 77, 38, 41, 53, 92, 85];
-      console.log(solution(arr));
     </script>
-  </head>
-  <body></body>
+  </body>
 </html>
