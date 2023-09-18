@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회문 문자열</title>
+    <script>
+      function solution(str) {
+        let answer = "YES";
+
+        if (str.length % 2 !== 0) {
+          answer = "NO";
+        }
+
+        for (let i = 0; i < str.length; i++) {
+          for (let j = str.length; j > 0; j--) {}
+        }
+
+        return answer;
+      }
+
+      const str = "gooG";
+      console.log(solution(str));
+    </script>
+  </head>
+  <body></body>
+</html>
